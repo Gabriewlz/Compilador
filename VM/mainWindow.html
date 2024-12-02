@@ -1,0 +1,54 @@
+<!-- 
+ * Máquina Virtual - Front End
+ * Bruno Vicente Donaio Kitaka - 16156341
+ * João Pedro Porta - 16039778
+ * Vinicius Trevisan - 16011231
+ -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Virtual Machine</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="mainWindow.js"></script>
+  <script src="instrucoes.js"></script>
+  <script src="https://kit.fontawesome.com/0a1afe8067.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+  <script src="openFile.js"></script>
+</head>
+
+<body>
+  <div class="code-window">
+    OPEN FILE
+  </div>
+  <div class="debugger-window">
+    <textarea name="stack" id="stack" disabled="true" class="stack"></textarea>
+    <div class="button-container">
+      <button class="debugger-button" id="play-normal" onclick="rodarCodigo()"><i class="fas fa-play"></i> Run</button>
+      <button class="debugger-button" id="play-debbug" onclick="ativarDebug()"><i class="fas fa-bug"></i> Debug</button>
+      <button class="debugger-button" id="step-line" onclick="setStep()"><i class="fas fa-shoe-prints"></i>
+        Step</button>
+      <button class="debugger-button" id="continue" onclick="setContinue()"><i class="fas fa-arrow-down"></i>
+        Continue</button>
+    </div>
+    <div class="status-button">
+      <button class="debugger-button" id="button" onclick="openFile()"><i class="fas fa-file-archive"></i> Open
+        File</button>
+      <button class="debugger-button" id="button" onclick="reset()"><i class="fas fa-power-off"></i> Reset</button>
+    </div>
+  </div>
+  <div class="io-window">
+    <div class="output-container">
+      <div class="output-container-div">
+        <span class="output-label"> Output<br>History</span>
+      </div>
+      <div>
+        <textarea name="output" id="output" disabled="true" class="output-window"></textarea>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
